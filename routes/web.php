@@ -21,7 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=> 'auth'], function(){
-    Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\UserController::class, 'home'])->name('landing');
+    Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('list-users');
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('create-user');
     Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('add-user');
     Route::get('/users/{user}', [App\Http\Controllers\UserController::class, 'show'])->name('show-user');

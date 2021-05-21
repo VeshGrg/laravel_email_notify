@@ -19,10 +19,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function home()
+    {
+        return view('home');
+    }
     public function index()
     {
         $user = $this->user->get();
-        return view('home')
+        return view('user.index')
             ->with('users', $user);
     }
 

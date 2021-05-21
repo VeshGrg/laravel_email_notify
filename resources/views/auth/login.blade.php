@@ -6,7 +6,9 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
+                @guest
+                    <h5>You need to login / register for Share Application</h5>
+                @endguest
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

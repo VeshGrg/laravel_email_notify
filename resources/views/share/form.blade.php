@@ -2,28 +2,29 @@
 @section('content')
     <div class="container">
         <h3 class="text-center">Apply for Share</h3>
-        <form action="{{ route('add-user') }}" method="POST" enctype="multipart/form-data">
+        @auth
+            <form action="{{ route('shares.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group row">
-                <label for="cotype" class="col-3">Company Type :</label>
+                <label for="company_type" class="col-3">Company Type :</label>
                 <div class="col-9">
-                    <select name="cotype" id="" class="form-control form-control-sm">
-                        <option value="">Hydropower</option>
-                        <option value="">BFI's</option>
-                        <option value="">Investment</option>
-                        <option value="">Hotel</option>
+                    <select name="company_type" id="" class="form-control form-control-sm">
+                        <option value="hydropower">Hydropower</option>
+                        <option value="bfi">BFI's</option>
+                        <option value="investment">Investment</option>
+                        <option value="hotel">Hotel</option>
                     </select>
-                    @error('cotype')
+                    @error('company_type')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="company" class="col-3">Choose a Company :</label>
+                <label for="name_of_company" class="col-3">Choose a Company :</label>
                 <div class="col-9">
-                    <select name="company" id="" class="form-control form-control-sm">
+                    <select name="name_of_company" id="" class="form-control form-control-sm">
                         <option value="nabil">Nabil Bank</option>
                         <option value="himal">Himalayan Bank</option>
                         <option value="sikles">Sikles Hydropower Ltd</option>
@@ -33,17 +34,17 @@
                         <option value="cdec">CDEC Hydropower Investment Ltd</option>
                         <option value="tourism">Tourism Investment Ltd</option>
                     </select>
-                    @error('company')
+                    @error('name_of_company')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="share" class="col-3">No. of Share :</label>
+                <label for="share_no" class="col-3">No. of Share :</label>
                 <div class="col-9">
-                    <input type="number" name="share" class="form-control form-control-sm" placeholder="Enter No. of Shares" required>
-                    @error('share')
+                    <input type="number" name="share_no" class="form-control form-control-sm" placeholder="Enter No. of Shares" required min="10">
+                    @error('share_no')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
@@ -52,7 +53,7 @@
             <div class="form-group row">
                 <label for="amt" class="col-3">Amount of Share :</label>
                 <div class="col-9">
-                    <input type="number" name="amt" class="form-control form-control-sm">
+                    <input type="number" name="amt" class="form-control form-control-sm" value="" min="100">
                     @error('amt')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -68,5 +69,6 @@
 
 
         </form>
+        @endauth
     </div>
 @endsection

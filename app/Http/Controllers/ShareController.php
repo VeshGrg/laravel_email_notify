@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Share;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ShareController extends Controller
@@ -11,9 +13,11 @@ class ShareController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Share $share)
     {
-        //
+        $share = $share->latest()->paginate(8);
+        return view('share.index')
+            ->with('shares', $share);
     }
 
     /**
@@ -34,7 +38,19 @@ class ShareController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        $request->validate([
+            'company_type' => 'required|in:hydropower,bfi,investment,hotel',
+            'name_of_company' => 'required',
+            'share_no' => 'required',
+            'amt' => 'required'
+        ]);
+        $data = $request->except('_token');
+        $data['user_id'] = $request->user()->id;
+        Share::create($request->all());
+
+        return redirect()->route('shares.index')
+            ->with('message', 'Share application made successfully.');
     }
 
     /**
@@ -43,9 +59,10 @@ class ShareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Share $share)
     {
-        //
+        return view('share.show')
+            ->with('share_data', $share);
     }
 
     /**
