@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
+        <p class="text-right"><a href="{{ route('landing') }}">Go back Dashboard</a></p>
         <h3 class="text-center">Apply for Share</h3>
         @auth
             <form action="{{ route('shares.store') }}" method="POST" enctype="multipart/form-data">

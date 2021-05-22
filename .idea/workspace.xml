@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7d9866-1736-484d-bb75-ac2deeb11b44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/share/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/share/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Share.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Share.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/share/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/share/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +169,8 @@
       <workItem from="1621511957571" duration="461000" />
       <workItem from="1621563862814" duration="7508000" />
       <workItem from="1621587672301" duration="616000" />
-      <workItem from="1621590577605" duration="8120000" />
+      <workItem from="1621590577605" duration="8835000" />
+      <workItem from="1621654886982" duration="1201000" />
     </task>
     <servers />
   </component>
