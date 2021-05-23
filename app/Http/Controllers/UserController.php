@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     protected $user = null;
-    public function __construct(User $user)
+    public function __construct()
     {
-        $this->user = $user;
+
     }
 
     /**
@@ -25,7 +25,7 @@ class UserController extends Controller
     }
     public function index()
     {
-        $user = $this->user->get();
+        $user = User::get();
         return view('user.index')
             ->with('users', $user);
     }
@@ -35,7 +35,7 @@ class UserController extends Controller
         return view('user.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, User $user)
     {
         $request->validate([
             'name' => 'required',
@@ -47,25 +47,25 @@ class UserController extends Controller
         $data = $request->except('password', 'password_confirmation');
         $data['password'] = Hash::make($request->password);
         $data['status'] = 'inactive';
-        $this->user->fill($data);
-        $this->user->save();
-        return redirect()->route('home')
+        $user->fill($data);
+        $user->save();
+        return redirect()->route('list-users')
             ->with('success', 'User Added Successfully.');
     }
 
-    public function show($user)
+    public function show(User $user)
     {
-        $this->user = $this->user->find($user);
+        User::find($user);
         return view('user.show')
-            ->with('user_detail', $this->user);
+            ->with('user_detail', $user);
     }
 
-    public function edit($user)
+    public function edit(User $user)
     {
         //die('hi');
-        $this->user = $this->user->find($user);
+        User::find($user);
         return view('user.edit')
-            ->with('user_data', $this->user);
+            ->with('user_data', $user);
     }
 
     public function update(Request $request, User $user)
@@ -85,7 +85,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('home')
+        return redirect()->route('list-users')
             ->with('success', 'User deleted successfully.');
     }
 }

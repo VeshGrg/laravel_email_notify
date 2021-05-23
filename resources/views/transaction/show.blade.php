@@ -5,10 +5,10 @@
             <div class="col-md-12 text-right">
                 <span><a href="{{ route('landing') }}">Go back Dashboard</a></span></div>
         </div>
-        <h2>Company Name - {{  $transaction_detail->company}}</h2>
+        <h2>Company Name - {{  ucfirst($transaction_detail->company)}}</h2>
         <div class="row">
             <div class="col-md-2">Company Name : </div>
-            <div class="col-md-6">{{ $transaction_detail->company }}</div>
+            <div class="col-md-6">{{ ucfirst($transaction_detail->company) }}</div>
         </div>
 
         <div class="row">

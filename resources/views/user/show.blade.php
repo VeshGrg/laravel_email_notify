@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
+        <div class="col-md-12 text-right">
+            <span><a href="{{ route('landing') }}">Go back Dashboard</a></span></div>
         <h2>User Detail - {{  $user_detail->name}}</h2>
         <div class="row">
             <div class="col-md-2">Name : </div>

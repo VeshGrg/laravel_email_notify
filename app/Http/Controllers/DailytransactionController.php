@@ -46,6 +46,8 @@ class DailytransactionController extends Controller
             'turnover' => 'required'
         ]);
         $data = $request->except('_token');
+//        $data['share_id'] = $dailytransaction->shares->id;
+//        dd($data);
         $dailytransaction->fill($data);
         $dailytransaction->save();
 
