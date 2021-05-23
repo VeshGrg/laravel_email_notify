@@ -9,4 +9,9 @@ class Share extends Model
 {
     use HasFactory;
     protected $fillable = ['name_of_company', 'company_type', 'user_id', 'share_no', 'amt'];
+
+    public function getUser()
+    {
+        return $this->hasOne('App\Models\User', 'id', 'user_id');
+    }
 }

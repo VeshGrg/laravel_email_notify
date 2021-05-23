@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareController;
+use App\Http\Controllers\DailytransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,7 @@ Route::group(['middleware'=> 'auth'], function(){
     Route::delete('/users/{user}/delete', [App\Http\Controllers\UserController::class, 'destroy'])->name('delete-user');
 
     Route::resource('shares', ShareController::class);
+
+    Route::resource('dailytransactions', DailytransactionController::class);
 });
 

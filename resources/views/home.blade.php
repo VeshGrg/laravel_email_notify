@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -48,7 +49,8 @@
                 <ul>
                     <li>Daily Transaction
                         <ul>
-                            <li><a href="">Add Transaction</a></li>
+                            <li><a href="{{ route('dailytransactions.index') }}">Show Transaction</a></li>
+                            <li><a href="{{ route('dailytransactions.create') }}">Add Transaction</a></li>
                         </ul>
                     </li>
                 </ul>

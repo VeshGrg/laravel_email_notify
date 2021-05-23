@@ -78,7 +78,7 @@ class UserController extends Controller
         $data = $request->except('_token');
         $user->fill($data);
         $user->save();
-        return redirect()->route('home')
+        return redirect()->route('landing')
             ->with('success', 'User updated successfully.');
     }
 

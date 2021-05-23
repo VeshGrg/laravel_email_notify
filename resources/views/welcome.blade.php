@@ -71,10 +71,10 @@
                 <div class="row" style="padding-bottom: 14px">
                     <div class="col-md-7 left">
                         <div class="row news-left">
-                            <div class="col-md-12"><p>Hello</p></div>
-                            <div class="col-md-12"><p>Hello1</p></div>
-                            <div class="col-md-12"><p>Hello2</p></div>
-                            <div class="col-md-12"><p>Hello3</p></div>
+                            <div class="col-md-12"><p><a href="">Cement factories production output less than their capacity: NRB report >></a></p></div>
+                            <div class="col-md-12"><p><a href="">Prabhu Select Fund Subscribed 145.62% As of This Moment >></a></p></div>
+                            <div class="col-md-12"><p><a href="">Union Life Insurance Given "BBB" Rating by ICRA Nepal; This is What it Means >></a></p></div>
+                            <div class="col-md-12"><p><a href="">Units of "NIC Asia Dynamic Debt Mutual Fund" Can Now Be Bought Online >></a></p></div>
                             <div class="col-md-12 apply"><a href="{{ route('shares.create') }}">Apply Share</a></div>
                         </div>
                     </div>
@@ -90,11 +90,13 @@
                 <div class="announce row">
                     <div class="col-md-5">
                         <h4>Announcement</h4>
-                        <p><span>2021-5-10</span>: <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum excepturi exercitationem facere fugit, harum, ipsa non, nostrum quae quas saepe similique ullam ut. Animi deserunt distinctio illo sapiente veritatis!</a></p>
-                        <p><span>2021-5-10</span>: <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum excepturi</a></p>
-                        <p><span>2021-5-10</span>: <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum excepturi</a></p>
-                        <p><span>2021-5-10</span>: <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum excepturi</a></p>
-                        <p><span>2021-5-10</span>: <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum excepturi</a></p>
+                        <p><span>2021-5-10</span>: <a href="">Synergy Power Development Limited has posted a net profit of Rs 62.65 million and published its 3rd quarter company analysis of the fiscal year 2077/78.</a></p>
+                        <p><span>2021-5-10</span>: <a href="">Lumbini General Insurance Company Limited has announced its 16th AGM going to be held on 28th Jestha, 2078 and has published its financial highlights of fiscal year 2076/77.</a></p>
+                        <p><span>2021-5-10</span>: <a href="">NMB Bank Limited is closing its (20,00,000 units @ Rs.1000 per unit) "8.5% NMB Rinpatra 2087/2088" to the general public from today (6th Jestha, 2078).</a></p>
+                        <p><span>2021-5-10</span>: <a href="">Siddhartha Insurance Limited has announced its 19th AGM going to be held on 28th Jestha, 2078.</a></p>
+                        <p><span>2021-5-10</span>: <a href="">Siddhartha Insurance Limited has announced its 19th AGM going to be held on 28th Jestha, 2078.</a></p>
+                        <p><span>2021-5-10</span>: <a href="">Siddhartha Insurance Limited has announced its 19th AGM going to be held on 28th Jestha, 2078.</a></p>
+                        <p class="text-right" style="color: blue"><span><a href="">View All</a></span></p>
                     </div>
                     <div class="col-md-5 price">
                         <h4>Daily Price Index</h4>
@@ -147,16 +149,23 @@
                                 <td>Rs 240</td>
                                 <td>Rs 150,000</td>
                             </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>ABC</td>
+                                <td>Hydropower</td>
+                                <td>RS 200</td>
+                                <td>Rs 240</td>
+                                <td>Rs 150,000</td>
+                            </tr>
                         </table>
+                        <p class="text-right" style="color: blue"><span><a href="">View All</a></span></p>
                     </div>
                     <div class="col-md-2">
                         <h4>Today's Event</h4>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
-                        <p><a href="">Lorem ipsum dolor sit amet, consectetu</a></p>
+                        <p><a href="">IPO Allotment Tomorrow at 11: CEDB Hydropower Development Company to Allot Its Shares</a></p>
+                        <p><a href="">IPO Allotment Tomorrow at 11: CEDB Hydropower Development Company to Allot Its Shares</a></p>
+                        <p><a href="">IPO Allotment Tomorrow at 11: CEDB Hydropower Development Company to Allot Its Shares</a></p>
+                        <p class="text-right" style="color: blue"><span><a href="">View All</a></span></p>
                     </div>
                 </div>
             </div>

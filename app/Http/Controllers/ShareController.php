@@ -36,7 +36,7 @@ class ShareController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Share $share)
     {
         //dd($request->all());
         $request->validate([
@@ -46,8 +46,11 @@ class ShareController extends Controller
             'amt' => 'required'
         ]);
         $data = $request->except('_token');
-        $data['user_id'] = $request->user()->id;
-        Share::create($request->all());
+        $data['user_id'] = auth()->user()->id;
+
+//        Share::create($request->all());
+        $share->fill($data);
+        $share->save();
 
         return redirect()->route('shares.index')
             ->with('message', 'Share application made successfully.');
