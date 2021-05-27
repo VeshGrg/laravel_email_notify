@@ -28,7 +28,14 @@
                             <td>{{ $share_detail->share_no }}</td>
                             <td>{{ $share_detail->amt }}</td>
                             <td>{{ $share_detail->user_id }}</td>
-                            <td><a href="{{ route('shares.show', $share_detail) }}">View</a></td>
+                            <td><a href="{{ route('shares.show', $share_detail) }}">View</a>,
+                                <a href="{{ route('shares.edit', $share_detail) }}">Edit</a>,
+                                <form action="{{ route('shares.destroy', $share_detail)  }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </table>

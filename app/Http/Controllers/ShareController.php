@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Share;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class ShareController extends Controller
 {
@@ -74,9 +75,12 @@ class ShareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Share $share)
     {
-        //
+        if (! Gate::allows('update-share', $share)) {
+            abort(403);
+        }
+        return view('share.edit')->with('share', $share);
     }
 
     /**
@@ -97,8 +101,12 @@ class ShareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Share $share)
     {
-        //
+        if (! Gate::allows('delete-share', $share)) {
+            abort(403);
+        }
+        $share->delete();
+        return redirect()->route('shares.index');
     }
 }
