@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -62,7 +63,7 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
-        //die('hi');
+        Gate::authorize('update', $user);
         User::find($user);
         return view('user.edit')
             ->with('user_data', $user);
@@ -84,6 +85,7 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
+        Gate::authorize('delete', $user);
         $user->delete();
         return redirect()->route('list-users')
             ->with('success', 'User deleted successfully.');

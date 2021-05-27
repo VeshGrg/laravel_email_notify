@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Policies;
+
+use App\Models\Share;
+use App\Models\User;
+use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Auth\Access\Response;
+
+class SharePolicy
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine whether the user can view any models.
+     *
+     * @param  \App\Models\User  $user
+     * @return mixed
+     */
+    public function viewAny(User $user)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can view the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Share  $share
+     * @return mixed
+     */
+    public function view(User $user, Share $share)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can create models.
+     *
+     * @param  \App\Models\User  $user
+     * @return mixed
+     */
+    public function create(User $user)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can update the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Share  $share
+     * @return mixed
+     */
+    public function update(User $user, Share $share)
+    {
+        return $user->id === $share->user_id;
+    }
+
+    /**
+     * Determine whether the user can delete the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Share  $share
+     * @return mixed
+     */
+    public function delete(User $user, Share $share)
+    {
+        return $user->id === $share->user_id?
+            Response::allow():
+            Response::deny('You must be Administrator.');
+    }
+
+    /**
+     * Determine whether the user can restore the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Share  $share
+     * @return mixed
+     */
+    public function restore(User $user, Share $share)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can permanently delete the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Share  $share
+     * @return mixed
+     */
+    public function forceDelete(User $user, Share $share)
+    {
+        //
+    }
+}

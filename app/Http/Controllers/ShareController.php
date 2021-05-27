@@ -77,7 +77,7 @@ class ShareController extends Controller
      */
     public function edit(Share $share)
     {
-        Gate::authorize('update-share', $share);
+        Gate::authorize('update', $share);
              return view('share.edit')->with('share', $share);
     }
 
@@ -101,7 +101,7 @@ class ShareController extends Controller
      */
     public function destroy(Share $share)
     {
-        Gate::authorize('delete-share', $share);
+        Gate::authorize('delete', $share);
         $share->delete();
        return redirect()->route('shares.index');
 
