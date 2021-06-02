@@ -41,7 +41,6 @@ class ShareController extends Controller
     {
         //dd($request->all());
         $request->validate([
-            'company_type' => 'required|in:hydropower,bfi,investment,hotel',
             'name_of_company' => 'required',
             'share_no' => 'required',
             'amt' => 'required'
