@@ -41,14 +41,12 @@ class ShareController extends Controller
     {
         //dd($request->all());
         $request->validate([
-            'name_of_company' => 'required',
+            'name_of_company' => 'required|in:nabil,himal,sikles,chilime,soaltee,barahi,cdec,tourism',
             'share_no' => 'required',
             'amt' => 'required'
         ]);
         $data = $request->except('_token');
-        $data['user_id'] = auth()->user()->id;
 
-//        Share::create($request->all());
         $share->fill($data);
         $share->save();
 

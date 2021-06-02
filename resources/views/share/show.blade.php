@@ -12,11 +12,6 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2">Company Type : </div>
-            <div class="col-md-6">{{ $share_data->company_type }}</div>
-        </div>
-
-        <div class="row">
             <div class="col-md-2">No. Of Share : </div>
             <div class="col-md-6">{{ $share_data->share_no }}</div>
         </div>
