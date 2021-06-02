@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e7d9866-1736-484d-bb75-ac2deeb11b44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +141,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../email_notify" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -189,6 +188,7 @@
       <workItem from="1622284788212" duration="251000" />
       <workItem from="1622285154950" duration="739000" />
       <workItem from="1622344809372" duration="192000" />
+      <workItem from="1622614153664" duration="509000" />
     </task>
     <servers />
   </component>

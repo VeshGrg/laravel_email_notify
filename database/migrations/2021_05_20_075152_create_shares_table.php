@@ -16,9 +16,6 @@ class CreateSharesTable extends Migration
         Schema::create('shares', function (Blueprint $table) {
             $table->id();
             $table->string('name_of_company');
-            $table->enum('company_type', ['hydropower', 'bfi', 'investment', 'hotel']);
-            $table->foreignId('user_id')->nullable()->constrained('users', 'id')
-                ->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->integer('share_no');
             $table->integer('amt');
             $table->timestamps();
