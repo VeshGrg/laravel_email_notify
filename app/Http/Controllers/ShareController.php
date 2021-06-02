@@ -74,8 +74,8 @@ class ShareController extends Controller
      */
     public function edit(Share $share)
     {
-        $this->authorize('update', $share);
-             return view('share.edit')->with('share', $share);
+        //$this->authorize('update', $share);
+        return view('share.edit')->with('share', $share);
     }
 
     /**
