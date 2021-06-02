@@ -8,7 +8,6 @@
                 <table class="text-center">
                     <thead class="table table-striped">
                         <th>S.No.</th>
-                        <th>Company Type</th>
                         <th>Name of Company</th>
                         <th>No. Of Share</th>
                         <th>Amount of Share</th>
@@ -23,7 +22,6 @@
                     @foreach($shares as $share_detail )
                         <tr>
                             <td>{{ ++$i }}</td>
-                            <td>{{ $share_detail->company_type}}</td>
                             <td>{{ $share_detail->name_of_company }}</td>
                             <td>{{ $share_detail->share_no }}</td>
                             <td>{{ $share_detail->amt }}</td>
