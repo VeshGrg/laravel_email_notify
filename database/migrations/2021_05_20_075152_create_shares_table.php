@@ -20,6 +20,23 @@ class CreateSharesTable extends Migration
             $table->integer('amt');
             $table->timestamps();
         });
+
+        Schema::create('share_user', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('share_id');
+            $table->unsignedBigInteger('user_id');
+            $table->timestamps();
+            $table->unique(['share_id', 'user_id']);
+
+            $table->foreign('share_id')->references('id')
+                ->on('shares')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+        });
     }
 
     /**
