@@ -37,7 +37,7 @@ class ShareController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Share $share)
+    public function store(Request $request)
     {
         //dd($request->all());
         $request->validate([
@@ -45,6 +45,7 @@ class ShareController extends Controller
             'share_no' => 'required',
             'amt' => 'required'
         ]);
+        $share = Share::created($request->all)->getUser()->attach(1);
         $data = $request->except('_token');
 
         $share->fill($data);
