@@ -8,21 +8,6 @@
             @csrf
 
             <div class="form-group row">
-                <label for="company_type" class="col-3">Company Type :</label>
-                <div class="col-9">
-                    <select name="company_type" id="" class="form-control form-control-sm">
-                        <option value="hydropower">Hydropower</option>
-                        <option value="bfi">BFI's</option>
-                        <option value="investment">Investment</option>
-                        <option value="hotel">Hotel</option>
-                    </select>
-                    @error('company_type')
-                    <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="form-group row">
                 <label for="name_of_company" class="col-3">Choose a Company :</label>
                 <div class="col-9">
                     <select name="name_of_company" id="" class="form-control form-control-sm">

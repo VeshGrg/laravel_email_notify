@@ -41,15 +41,12 @@ class ShareController extends Controller
     {
         //dd($request->all());
         $request->validate([
-            'company_type' => 'required|in:hydropower,bfi,investment,hotel',
-            'name_of_company' => 'required',
+            'name_of_company' => 'required|in:nabil,himal,sikles,chilime,soaltee,barahi,cdec,tourism',
             'share_no' => 'required',
             'amt' => 'required'
         ]);
         $data = $request->except('_token');
-        $data['user_id'] = auth()->user()->id;
 
-//        Share::create($request->all());
         $share->fill($data);
         $share->save();
 
@@ -77,8 +74,8 @@ class ShareController extends Controller
      */
     public function edit(Share $share)
     {
-        $this->authorize('update', $share);
-             return view('share.edit')->with('share', $share);
+        //$this->authorize('update', $share);
+        return view('share.edit')->with('share', $share);
     }
 
     /**

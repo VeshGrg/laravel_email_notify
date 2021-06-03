@@ -15,13 +15,27 @@ class CreateSharesTable extends Migration
     {
         Schema::create('shares', function (Blueprint $table) {
             $table->id();
-            $table->string('name_of_company');
-            $table->enum('company_type', ['hydropower', 'bfi', 'investment', 'hotel']);
-            $table->foreignId('user_id')->nullable()->constrained('users', 'id')
-                ->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->enum('name_of_company', ['nabil', 'himal', 'sikles', 'chilime', 'soaltee', 'barahi', 'cdec', 'tourism']);
             $table->integer('share_no');
             $table->integer('amt');
             $table->timestamps();
+        });
+
+        Schema::create('share_user', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('share_id');
+            $table->unsignedBigInteger('user_id');
+            $table->timestamps();
+            $table->unique(['share_id', 'user_id']);
+
+            $table->foreign('share_id')->references('id')
+                ->on('shares')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

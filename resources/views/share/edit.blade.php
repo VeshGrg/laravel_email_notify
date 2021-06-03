@@ -8,21 +8,6 @@
                 @csrf
 
                 <div class="form-group row">
-                    <label for="company_type" class="col-3">Company Type :</label>
-                    <div class="col-9">
-                        <select name="company_type" id="" class="form-control form-control-sm">
-                            <option value="hydropower" {{(isset($share) && $share->company_type == 'hydropower') ? 'selected' : ''}}>Hydropower</option>
-                            <option value="bfi" {{ (isset($share) && $share->company_type == 'bfi') ? 'selected' : ''}}>BFI's</option>
-                            <option value="investment" {{ (isset($share) && $share->company_type == 'investment') ? 'selected' : ''}}>Investment</option>
-                            <option value="hotel" {{ (isset($share) && $share->company_type == 'hotel') ? 'selected' : ''}}>Hotel</option>
-                        </select>
-                        @error('company_type')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <label for="name_of_company" class="col-3">Choose a Company :</label>
                     <div class="col-9">
                         <select name="name_of_company" id="" class="form-control form-control-sm">
