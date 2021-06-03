@@ -12,6 +12,6 @@ class Share extends Model
 
     public function getUser()
     {
-        return $this->belongsToMany(User::class, 'share_user');
+        return $this->belongsToMany(User::class, 'share_user')->withTimestamps();
     }
 }

@@ -45,6 +45,6 @@ class User extends Authenticatable
 
     public function shares()
     {
-        return $this->belongsToMany(Share::class, 'share_user');
+        return $this->belongsToMany(Share::class, 'share_user')->withTimestamps();
     }
 }
