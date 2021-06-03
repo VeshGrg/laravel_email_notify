@@ -12,6 +12,6 @@ class Share extends Model
 
     public function getUser()
     {
-        return $this->hasOne('App\Models\User', 'id', 'user_id');
+        return $this->belongsToMany(User::class, 'share_user');
     }
 }
