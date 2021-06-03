@@ -66,9 +66,9 @@ class SharePolicy
      */
     public function delete(User $user, Share $share)
     {
-        return $user->id === $share->user_id?
+        return $user->role === 'admin'?
             Response::allow():
-            Response::deny('You must be Administrator.');
+            Response::deny('You must be an Administrator.');
     }
 
     /**
