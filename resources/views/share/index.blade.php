@@ -21,7 +21,7 @@
 
                     @foreach($shares as $share_detail )
                         <tr>
-                            <td>{{ ++$i }}</td>
+                            <td>{{ ++$i }}</td>s
                             <td>{{ $share_detail->name_of_company }}</td>
                             <td>{{ $share_detail->share_no }}</td>
                             <td>{{ $share_detail->amt }}</td>

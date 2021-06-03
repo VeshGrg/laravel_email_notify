@@ -4,7 +4,8 @@
         <p class="text-right"><a href="{{ route('landing') }}">Go back Dashboard</a></p>
         <h3 class="text-center">Edit Share</h3>
         @auth
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('shares.update', $share) }}" method="POST" enctype="multipart/form-data">
+                @method('patch')
                 @csrf
 
                 <div class="form-group row">

@@ -85,9 +85,20 @@ class ShareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Share $share)
     {
-        //
+        $request->validate([
+            'name_of_company' => 'required|in:nabil,himal,sikles,chilime,soaltee,barahi,cdec,tourism',
+            'share_no' => 'required',
+            'amt' => 'required'
+        ]);
+        $data = $request->except('_token');
+
+        $share->fill($data);
+        $share->save();
+
+        return redirect()->route('shares.index')
+            ->with('message', 'Share application updated successfully.');
     }
 
     /**
