@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dailytransaction;
+use App\Models\Share;
 use Illuminate\Http\Request;
 
 class DailytransactionController extends Controller
@@ -35,7 +36,7 @@ class DailytransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Dailytransaction $dailytransaction)
+    public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
     {
         $request->validate([
            'company' => 'required',

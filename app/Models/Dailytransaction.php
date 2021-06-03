@@ -12,7 +12,7 @@ class Dailytransaction extends Model
 
     public function shares()
     {
-        return $this->hasOne('App\Models\Share', 'id', 'share_id');
+        return $this->hasMany('App\Models\Share', 'id', 'share_id');
     }
 
 }
