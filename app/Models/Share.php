@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Share extends Model
 {
     use HasFactory;
-    protected $fillable = ['name_of_company', 'company_type', 'user_id', 'share_no', 'amt'];
+    protected $fillable = ['name_of_company', 'share_no', 'amt'];
 
     public function user()
     {
         return $this->belongsToMany(User::class, 'share_user')->withTimestamps();
+    }
+
+    public function dailytransaction()
+    {
+        return $this->belongsTo(Dailytransaction::class, 'share_id');
     }
 }

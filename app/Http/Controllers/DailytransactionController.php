@@ -36,7 +36,7 @@ class DailytransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
+    public function store(Request $request, Dailytransaction $dailytransaction)
     {
         $request->validate([
            'company' => 'required',
@@ -47,7 +47,7 @@ class DailytransactionController extends Controller
             'turnover' => 'required'
         ]);
         $data = $request->except('_token');
-//        $data['share_id'] = $dailytransaction->shares->id;
+//        $data['share_id'] = $dailytransaction->share->id;
 //        dd($data);
         $dailytransaction->fill($data);
         $dailytransaction->save();
