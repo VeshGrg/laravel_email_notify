@@ -66,7 +66,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         Gate::authorize('update', $user);
-        User::find($user);
+        //User::find($user);
         return view('user.edit')
             ->with('user_data', $user);
     }

@@ -55,7 +55,7 @@ class UserPolicy
      */
     public function update(User $user)
     {
-        return $user->id == \request()->user()->id?
+        return $user->id == auth()->user()->id?
             Response::allow():
             Response::deny('You are not authorised');
     }
