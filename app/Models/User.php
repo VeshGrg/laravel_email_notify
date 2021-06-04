@@ -43,7 +43,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function shares()
+    public function share()
     {
         return $this->belongsToMany(Share::class, 'share_user')->withTimestamps();
     }

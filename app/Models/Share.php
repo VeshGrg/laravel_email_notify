@@ -10,7 +10,7 @@ class Share extends Model
     use HasFactory;
     protected $fillable = ['name_of_company', 'company_type', 'user_id', 'share_no', 'amt'];
 
-    public function getUser()
+    public function user()
     {
         return $this->belongsToMany(User::class, 'share_user')->withTimestamps();
     }

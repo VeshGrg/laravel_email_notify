@@ -44,7 +44,7 @@ class ShareController extends Controller
             'share_no' => 'required',
             'amt' => 'required'
         ]);
-        Share::create($request->all())->getUser()->attach(auth()->user()->id);
+        Share::create($request->all())->user()->attach(auth()->user()->id);
 
 
         return redirect()->route('shares.index')
