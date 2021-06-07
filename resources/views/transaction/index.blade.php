@@ -12,6 +12,7 @@
                     <th>Company Type</th>
                     <th>Opening Price</th>
                     <th>Closing Price</th>
+                    <th>Company Share</th>
                     <th>Total Transaction</th>
                     <th>Turnover</th>
                     <th>Action</th>
@@ -28,6 +29,7 @@
                             <td>{{ $transaction->type }}</td>
                             <td>{{ $transaction->op_price }}</td>
                             <td>{{ $transaction->cl_price }}</td>
+                            <td>{{ @$transaction->share->name_of_company }}</td>
                             <td>{{ $transaction->tot_transaction}}</td>
                             <td>{{ $transaction->turnover }}</td>
                             <td><a href="{{ route('dailytransactions.show', $transaction) }}">View</a></td>

@@ -7,7 +7,7 @@
             <form action="{{ route('dailytransactions.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
-
+                {{ $errors }}
                 <div class="form-group row">
                     <label for="company" class="col-3">Choose a Company :</label>
                     <div class="col-9">

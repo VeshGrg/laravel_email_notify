@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e7d9866-1736-484d-bb75-ac2deeb11b44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/share_notify.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/share_notify.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DailytransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DailytransactionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Dailytransaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dailytransaction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Share.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Share.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transaction/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transaction/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +139,8 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
     </include_path>
   </component>
   <component name="ProjectId" id="1sjkE0M89chsU0RXJFOdijWHXOv" />
@@ -197,7 +208,11 @@
       <workItem from="1622714865981" duration="1420000" />
       <workItem from="1622719206102" duration="6503000" />
       <workItem from="1622783324558" duration="3890000" />
-      <workItem from="1622799188713" duration="6350000" />
+      <workItem from="1622799188713" duration="6464000" />
+      <workItem from="1622893254720" duration="3835000" />
+      <workItem from="1622978683667" duration="239000" />
+      <workItem from="1623033556062" duration="1231000" />
+      <workItem from="1623067944416" duration="1859000" />
     </task>
     <servers />
   </component>

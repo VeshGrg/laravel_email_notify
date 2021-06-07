@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dailytransaction;
 use App\Models\Share;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DailytransactionController extends Controller
 {
@@ -36,17 +37,19 @@ class DailytransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Dailytransaction $dailytransaction)
+    public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
     {
         $request->validate([
            'company' => 'required',
            'type' => 'required|in:hydropower,bfi,investment,hotel',
            'op_price' => 'required',
             'cl_price' => 'required',
+            'share_id' => 'nullable|exists:shares,id',
             'tot_transaction' => 'required',
             'turnover' => 'required'
         ]);
         $data = $request->except('_token');
+
 //        $data['share_id'] = $dailytransaction->share->id;
 //        dd($data);
         $dailytransaction->fill($data);

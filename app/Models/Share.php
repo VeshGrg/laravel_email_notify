@@ -17,6 +17,6 @@ class Share extends Model
 
     public function dailytransaction()
     {
-        return $this->belongsTo(Dailytransaction::class, 'share_id');
+        return $this->hasOne(Dailytransaction::class, 'share_id', 'id');
     }
 }

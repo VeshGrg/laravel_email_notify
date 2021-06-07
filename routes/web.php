@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareController;
 use App\Http\Controllers\DailytransactionController;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,15 @@ Route::group(['middleware'=> 'auth'], function(){
     Route::resource('shares', ShareController::class);
 
     Route::resource('dailytransactions', DailytransactionController::class);
+});
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('github')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('github')->user();
+    dd($user);
+    // $user->token
 });
 
