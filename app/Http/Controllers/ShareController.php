@@ -37,7 +37,7 @@ class ShareController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,User $user)
+    public function store(Request $request, User $user)
     {
         $request->validate([
             'name_of_company' => 'required|in:nabil,himal,sikles,chilime,soaltee,barahi,cdec,tourism',
@@ -45,7 +45,6 @@ class ShareController extends Controller
             'amt' => 'required'
         ]);
         Share::create($request->all())->user()->attach(auth()->user()->id);
-
 
         return redirect()->route('shares.index')
             ->with('message', 'Share application made successfully.');
