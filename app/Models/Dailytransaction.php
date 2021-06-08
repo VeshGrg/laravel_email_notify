@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Dailytransaction extends Model
 {
     use HasFactory;
-    protected $fillable = ['company', 'type', 'share_id', 'op_price','cl_price', 'tot_transaction', 'turnover'];
+    protected $fillable = ['company', 'shareName_id', 'type', 'op_price','cl_price', 'tot_transaction', 'turnover'];
 
-    public function share()
+    public function shareDetail()
     {
-        return $this->hasOne(Share::class, 'id', 'share_id');
+        return $this->hasOne('App\Models\Share', 'id', 'shareName_id');
     }
 
 }

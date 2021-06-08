@@ -15,8 +15,8 @@ class Share extends Model
         return $this->belongsToMany(User::class, 'share_user')->withTimestamps();
     }
 
-    public function dailytransaction()
-    {
-        return $this->hasOne(Dailytransaction::class, 'share_id', 'id');
-    }
+//    public function dailytransaction()
+//    {
+//        return $this->hasOne(Dailytransaction::class, 'share_id', 'id');
+//    }
 }

@@ -44,13 +44,13 @@ class DailytransactionController extends Controller
            'type' => 'required|in:hydropower,bfi,investment,hotel',
            'op_price' => 'required',
             'cl_price' => 'required',
-            'share_id' => 'nullable|exists:shares,id',
+            'shareName_id' => 'nullable|exists:shares,id',
             'tot_transaction' => 'required',
             'turnover' => 'required'
         ]);
         $data = $request->except('_token');
 
-//        $data['share_id'] = $dailytransaction->share->id;
+//        $data['shareName_id'] = $dailytransaction->shareDetail->id;
 //        dd($data);
         $dailytransaction->fill($data);
         $dailytransaction->save();

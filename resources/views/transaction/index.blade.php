@@ -24,12 +24,13 @@
 
                     @foreach($daily_transaction as $transaction )
                         <tr>
+{{--                            {{ dd($transaction->shareDetail()) }}--}}
                             <td>{{ ++$i }}</td>
                             <td>{{ $transaction->company}}</td>
                             <td>{{ $transaction->type }}</td>
                             <td>{{ $transaction->op_price }}</td>
                             <td>{{ $transaction->cl_price }}</td>
-                            <td>{{ @$transaction->share->name_of_company }}</td>
+                            <td>{{ @$transaction->shareDetail->name_of_company }}</td>
                             <td>{{ $transaction->tot_transaction}}</td>
                             <td>{{ $transaction->turnover }}</td>
                             <td><a href="{{ route('dailytransactions.show', $transaction) }}">View</a></td>
