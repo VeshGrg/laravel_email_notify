@@ -54,7 +54,7 @@ class DailytransactionController extends Controller
         //Dailytransaction::create($request->all())->shareDetail;
         $data = $request->except('_token');
         //dd($dailytransaction->shareDetail());
-        $data['shareName_id'] = $dailytransaction->shareDetail->id;
+        //$data['shareName_id'] = $dailytransaction->shareDetail->id;
         //dd($data);
         $dailytransaction->fill($data);
         $dailytransaction->save();
