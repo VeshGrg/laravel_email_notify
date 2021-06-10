@@ -12,7 +12,14 @@ class Dailytransaction extends Model
 
     public function shareDetail()
     {
-        return $this->hasOne('App\Models\Share', 'id', 'shareName_id');
+//        $share = new Share([
+//            'name_of_company' => 'required|in:nabil',
+//            'share_no' => '100',
+//            'amt' => '1000'
+//        ]);
+//        return $share;
+        return $this->belongsTo(Share::class, 'shareName_id', 'id');
     }
+
 
 }

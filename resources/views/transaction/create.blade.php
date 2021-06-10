@@ -11,16 +11,18 @@
                 <div class="form-group row">
                     <label for="company" class="col-3">Choose a Company :</label>
                     <div class="col-9">
-                        <select name="company" id="" class="form-control form-control-sm">
-                            <option value="nabil">Nabil Bank</option>
-                            <option value="himal">Himalayan Bank</option>
-                            <option value="sikles">Sikles Hydropower Ltd</option>
-                            <option value="chilime">Chilime Hydropower Ltd</option>
-                            <option value="soaltee">Soaltee Hotel</option>
-                            <option value="barahi">Hotel Barahi</option>
-                            <option value="cdec">CDEC Hydropower Investment Ltd</option>
-                            <option value="tourism">Tourism Investment Ltd</option>
-                        </select>
+                        <input type="text" name="company" class="form-control form-control-sm" required placeholder="Enter Company name">
+{{--                        <select name="company" id="" class="form-control form-control-sm">--}}
+{{--                            <option value="">--Choose a Company--</option>--}}
+{{--                            <option value="nabil">Nabil Bank</option>--}}
+{{--                            <option value="himal">Himalayan Bank</option>--}}
+{{--                            <option value="sikles">Sikles Hydropower Ltd</option>--}}
+{{--                            <option value="chilime">Chilime Hydropower Ltd</option>--}}
+{{--                            <option value="soaltee">Soaltee Hotel</option>--}}
+{{--                            <option value="barahi">Hotel Barahi</option>--}}
+{{--                            <option value="cdec">CDEC Hydropower Investment Ltd</option>--}}
+{{--                            <option value="tourism">Tourism Investment Ltd</option>--}}
+{{--                        </select>--}}
                         @error('company')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -31,6 +33,7 @@
                     <label for="type" class="col-3">Company Type :</label>
                     <div class="col-9">
                         <select name="type" id="" class="form-control form-control-sm">
+                            <option value="">--Choose Company Type--</option>
                             <option value="hydropower">Hydropower</option>
                             <option value="bfi">BFI's</option>
                             <option value="investment">Investment</option>

@@ -39,6 +39,8 @@ class DailytransactionController extends Controller
      */
     public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
     {
+
+
         $request->validate([
            'company' => 'required',
            'type' => 'required|in:hydropower,bfi,investment,hotel',
@@ -48,10 +50,12 @@ class DailytransactionController extends Controller
             'tot_transaction' => 'required',
             'turnover' => 'required'
         ]);
-        $data = $request->except('_token');
 
-//        $data['shareName_id'] = $dailytransaction->shareDetail->id;
-//        dd($data);
+        //Dailytransaction::create($request->all())->shareDetail;
+        $data = $request->except('_token');
+        //dd($dailytransaction->shareDetail());
+        $data['shareName_id'] = $dailytransaction->shareDetail->id;
+        //dd($data);
         $dailytransaction->fill($data);
         $dailytransaction->save();
 
