@@ -58,6 +58,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @php
+                                        $user = \App\Models\User::find(auth()->user()->id);
+                                    @endphp
+                                    <a href="{{ route('change-pwd', $user->id) }}" class="dropdown-item">
+                                        {{ __('Change Password') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

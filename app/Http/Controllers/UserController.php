@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dailytransaction;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 
@@ -94,5 +95,24 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('list-users')
             ->with('success', 'User deleted successfully.');
+    }
+
+    public function changePassword(User $user)
+    {
+        User::findOrFail($user->id);
+        return view('change-pass')->with('pass', $user);
+    }
+
+    public function updatePassword(Request $request, User $user)
+    {
+        //dd($request->all());
+        $request->validate([
+            'newPassword' => 'required|min:8'
+        ]);
+        $data = $request->except('_token');
+        $user->fill($data);
+        $user->save();
+
+        return redirect()->route('landing');
     }
 }

@@ -35,6 +35,9 @@ Route::group(['middleware'=> 'auth'], function(){
     Route::resource('shares', ShareController::class);
 
     Route::resource('dailytransactions', DailytransactionController::class);
+
+    Route::get('/user/{user}/change-password', [App\Http\Controllers\UserController::class, 'changePassword'])->name('change-pwd');
+    Route::patch('user/{user}', [App\Http\Controllers\UserController::class, 'updatePassword'])->name('update-password');
 });
 
 Route::get('/auth/redirect', function () {
