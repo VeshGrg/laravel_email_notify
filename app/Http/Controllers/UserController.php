@@ -109,8 +109,7 @@ class UserController extends Controller
         $request->validate([
             'newPassword' => 'required|min:8'
         ]);
-        $data = $request->except('_token');
-        $user->fill($data);
+        $user->password = bcrypt($request->newPassword);
         $user->save();
 
         return redirect()->route('landing');
