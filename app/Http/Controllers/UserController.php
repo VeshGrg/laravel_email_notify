@@ -6,6 +6,7 @@ use App\Models\Dailytransaction;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 
@@ -105,13 +106,20 @@ class UserController extends Controller
 
     public function updatePassword(Request $request, User $user)
     {
-        //dd($request->all());
+        //dd($user);
+        if (!Hash::check($request->currentPassword, $user->password)){
+            return back()->with([
+                'msg_currentPassword' => 'Your current password does not matches with the password you provided! Please try again.'
+            ]);
+        }
         $request->validate([
-            'newPassword' => 'required|min:8'
+            'currentPassword' => 'required',
+            'password' => 'required|confirmed|min:8'
         ]);
-        $user->password = bcrypt($request->newPassword);
+        $user->password = bcrypt($request->password);
         $user->save();
 
+        Auth::logout();
         return redirect()->route('landing');
     }
 }
