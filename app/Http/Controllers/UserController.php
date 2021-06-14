@@ -54,7 +54,7 @@ class UserController extends Controller
         $data['status'] = 'inactive';
         $user->fill($data);
         $user->save();
-        return redirect()->route('list-users')
+        return redirect()->route('users.index')
             ->with('success', 'User Added Successfully.');
     }
 
@@ -94,7 +94,7 @@ class UserController extends Controller
     {
         Gate::authorize('delete', $user);
         $user->delete();
-        return redirect()->route('list-users')
+        return redirect()->route('users.index')
             ->with('success', 'User deleted successfully.');
     }
 

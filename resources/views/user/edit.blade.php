@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <h3 class="text-center">Add a User</h3>
-            <form action="{{ route('update-user', $user_data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('users.update', $user_data->id) }}" method="POST" enctype="multipart/form-data">
                 @method('put')
                 @csrf
 

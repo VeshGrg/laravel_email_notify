@@ -28,9 +28,9 @@
                             <td>{{ $user_detail->status }}</td>
                             <td>{{ $user_detail->created_at->format('jS M Y') }}</td>
                             <td>
-                                <a href="{{ route('show-user', $user_detail) }}">View</a>,
-                                <a href="{{ route('edit-user', $user_detail) }}">Edit</a> ,
-                                <form action="{{ route('delete-user', $user_detail) }}" method="POST" enctype="multipart/form-data">
+                                <a href="{{ route('users.show', $user_detail) }}">View</a>,
+                                <a href="{{ route('users.edit', $user_detail) }}">Edit</a> ,
+                                <form action="{{ route('users.delete', $user_detail) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="delete">Delete</button>

@@ -25,13 +25,13 @@ Auth::routes();
 
 Route::group(['middleware'=> 'auth'], function(){
     Route::get('/home', [UserController::class, 'home'])->name('landing');
-    Route::get('/users', [UserController::class, 'index'])->name('list-users');
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
-    Route::post('/users', [UserController::class, 'store'])->name('add-user');
-    Route::get('/users/{user}', [UserController::class, 'show'])->name('show-user');
-    Route::get('/users/{user}/edit', [UserController::class, 'edit'] )->name('edit-user');
-    Route::put('/users/{user}', [UserController::class, 'update'])->name('update-user');
-    Route::delete('/users/{user}/delete', [UserController::class, 'destroy'])->name('delete-user');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
+    Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
+    Route::get('/users/{user}/edit', [UserController::class, 'edit'] )->name('users.edit');
+    Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
+    Route::delete('/users/{user}/delete', [UserController::class, 'destroy'])->name('users.delete');
 
     Route::resource('shares', ShareController::class);
 

@@ -3,7 +3,7 @@
     <div class="container">
         <p class="text-right"><a href="{{ route('landing') }}">Go Back Dashboard</a></p>
         <h3 class="text-center">Add a User</h3>
-            <form action="{{ route('add-user') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group row">

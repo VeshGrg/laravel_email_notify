@@ -40,8 +40,8 @@
                 <ul>
                     <li>User
                         <ul>
-                            <li><a href="{{ route('list-users') }}">List Users</a></li>
-                            <li><a href="{{ route('create-user') }}">Add a User</a></li>
+                            <li><a href="{{ route('users.index') }}">List Users</a></li>
+                            <li><a href="{{ route('users.create') }}">Add a User</a></li>
                         </ul>
                     </li>
                 </ul>
