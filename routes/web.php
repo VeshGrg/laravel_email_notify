@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareController;
 use App\Http\Controllers\DailytransactionController;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=> 'auth'], function(){
-    Route::get('/home', [App\Http\Controllers\UserController::class, 'home'])->name('landing');
-    Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('list-users');
-    Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('create-user');
-    Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('add-user');
-    Route::get('/users/{user}', [App\Http\Controllers\UserController::class, 'show'])->name('show-user');
-    Route::get('/users/{user}/edit', [App\Http\Controllers\UserController::class, 'edit'] )->name('edit-user');
-    Route::put('/users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('update-user');
-    Route::delete('/users/{user}/delete', [App\Http\Controllers\UserController::class, 'destroy'])->name('delete-user');
+    Route::get('/home', [UserController::class, 'home'])->name('landing');
+    Route::get('/users', [UserController::class, 'index'])->name('list-users');
+    Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
+    Route::post('/users', [UserController::class, 'store'])->name('add-user');
+    Route::get('/users/{user}', [UserController::class, 'show'])->name('show-user');
+    Route::get('/users/{user}/edit', [UserController::class, 'edit'] )->name('edit-user');
+    Route::put('/users/{user}', [UserController::class, 'update'])->name('update-user');
+    Route::delete('/users/{user}/delete', [UserController::class, 'destroy'])->name('delete-user');
 
     Route::resource('shares', ShareController::class);
 

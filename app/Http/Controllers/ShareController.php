@@ -37,14 +37,18 @@ class ShareController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, User $user)
+    public function store(Request $request, Share $share)
     {
         $request->validate([
             'name_of_company' => 'required|in:nabil,himal,sikles,chilime,soaltee,barahi,cdec,tourism',
             'share_no' => 'required',
             'amt' => 'required'
         ]);
-        Share::create($request->all())->user()->attach(auth()->user()->id);
+        //Share::create($request->all())->user()->attach(auth()->user()->id);
+        $data = $request->except('_token');
+        $data['user_id'] = auth()->user()->id;
+        $share->fill($data);
+        $share->save();
 
         return redirect()->route('shares.index')
             ->with('message', 'Share application made successfully.');

@@ -18,7 +18,7 @@ class Dailytransaction extends Model
 //            'amt' => '1000'
 //        ]);
 //        return $share;
-        return $this->belongsTo(Share::class, 'shareName_id', 'id');
+        return $this->hasOne(Share::class);
     }
 
 

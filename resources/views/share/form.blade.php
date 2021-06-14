@@ -6,7 +6,7 @@
         @auth
             <form action="{{ route('shares.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-
+            {{ $errors }}
             <div class="form-group row">
                 <label for="name_of_company" class="col-3">Choose a Company :</label>
                 <div class="col-9">

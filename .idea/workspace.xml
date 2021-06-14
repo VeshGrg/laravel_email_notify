@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e7d9866-1736-484d-bb75-ac2deeb11b44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/change-pass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/change-pass.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShareController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Dailytransaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dailytransaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Share.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Share.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_20_075152_create_shares_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_23_025430_create_dailytransactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_23_025430_create_dailytransactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/share/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/share/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +227,10 @@
       <workItem from="1623501971478" duration="2640000" />
       <workItem from="1623564392919" duration="57000" />
       <workItem from="1623571537375" duration="2621000" />
-      <workItem from="1623574658004" duration="567000" />
+      <workItem from="1623574658004" duration="765000" />
+      <workItem from="1623579328823" duration="619000" />
+      <workItem from="1623582611649" duration="2160000" />
+      <workItem from="1623670169932" duration="292000" />
     </task>
     <servers />
   </component>
