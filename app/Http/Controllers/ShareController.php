@@ -44,11 +44,12 @@ class ShareController extends Controller
             'share_no' => 'required',
             'amt' => 'required'
         ]);
-        //Share::create($request->all())->user()->attach(auth()->user()->id);
-        $data = $request->except('_token');
-        $data['user_id'] = auth()->user()->id;
-        $share->fill($data);
-        $share->save();
+        //Share::find($share->id);
+        Share::create($request->all())->user()->attach(auth()->user()->id);
+//        $data = $request->except('_token');
+//        $share->user()->attach(auth()->user()->id);
+//        $share->fill($data);
+//        $share->save();
 
         return redirect()->route('shares.index')
             ->with('message', 'Share application made successfully.');

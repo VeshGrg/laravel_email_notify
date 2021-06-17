@@ -11,8 +11,10 @@
                 <div class="form-group row">
                     <label for="company" class="col-3">Choose a Company :</label>
                     <div class="col-9">
-                        <input type="text" name="company" class="form-control form-control-sm" required placeholder="Enter Company name">
-{{--                        <select name="company" id="" class="form-control form-control-sm">--}}
+                        <select name="company" id="" class="form-control form-control-sm">
+                            @foreach($share_data as $share)
+                            <option value="{{ $share }}">{{ $share }}</option>
+                            @endforeach
 {{--                            <option value="">--Choose a Company--</option>--}}
 {{--                            <option value="nabil">Nabil Bank</option>--}}
 {{--                            <option value="himal">Himalayan Bank</option>--}}
@@ -22,7 +24,7 @@
 {{--                            <option value="barahi">Hotel Barahi</option>--}}
 {{--                            <option value="cdec">CDEC Hydropower Investment Ltd</option>--}}
 {{--                            <option value="tourism">Tourism Investment Ltd</option>--}}
-{{--                        </select>--}}
+                        </select>
                         @error('company')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror

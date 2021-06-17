@@ -15,9 +15,13 @@ class CreateDailytransactionsTable extends Migration
     {
         Schema::create('dailytransactions', function (Blueprint $table) {
             $table->id();
-            $table->string('company');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('share_id');
+            $table->enum('company', ['nabil', 'himal', 'sikles', 'chilime', 'soaltee', 'barahi', 'cdec', 'tourism']);
+            $table->foreignId('user_id')->constrained('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreignId('share_id')->nullable()->constrained('shares')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->enum('type', ['hydropower', 'bfi', 'investment', 'hotel']);
             $table->float('op_price');
             $table->float('cl_price');

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Share extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id', 'transaction_id', 'name_of_company', 'share_no', 'amt'];
+    protected $fillable = ['name_of_company', 'share_no', 'amt'];
 
     public function user()
     {
