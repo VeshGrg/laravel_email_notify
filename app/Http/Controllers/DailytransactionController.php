@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ShareClPriceNotification;
 use App\Models\Dailytransaction;
 use App\Models\Share;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class DailytransactionController extends Controller
 {
@@ -57,7 +59,6 @@ class DailytransactionController extends Controller
 
         return redirect()->route('dailytransactions.index')
             ->with('success', 'Daily transactions added successfully.');
-
     }
 
     /**

@@ -43,8 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function share()
+    public function shares()
     {
-        return $this->hasOne(Share::class);
+        return $this->belongsToMany(Share::class);
     }
 }

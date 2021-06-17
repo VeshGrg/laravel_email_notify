@@ -8,8 +8,8 @@
     <title>Price notification</title>
 </head>
 <body>
-    <h2>Hello there</h2>,
-    <p>Today-2021-05-12 closing price of Sikles hydropower  is Rs 343.</p>
-    <h3>Thank You !!</h3>, <span>Hamro Share Bazaar Team</span>
+    <h2>Closing Price Notification. Date: {{ date('Y-m-d') }}</h2>,
+    <p>Closing price of {{ $dailytransaction->company }}  is Rs {{ $dailytransaction->cl_price }}.</p>
+    <h5>Thank You !!</h5> <span>Hamro Share Bazaar Team</span>
 </body>
 </html>

@@ -51,6 +51,7 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+            'from' => ['address' => 'example@example.com', 'name' => 'Hamro Share Bazaar'],
         ],
 
         'postmark' => [

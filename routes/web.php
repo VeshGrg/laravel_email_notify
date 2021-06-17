@@ -5,6 +5,7 @@ use App\Http\Controllers\ShareController;
 use App\Http\Controllers\DailytransactionController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,16 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return view('welcome');
 });
+
+//Route::get('/', function () {
+//    $user = \App\Models\User::first();
+//    foreach($user->shares as $share){
+//        echo $share->name_of_company;
+//    };
+//    return view('mail.price_notify');
+//});
 
 Auth::routes();
 
@@ -37,8 +46,10 @@ Route::group(['middleware'=> 'auth'], function(){
 
     Route::resource('dailytransactions', DailytransactionController::class);
 
-    Route::get('/user/{user}/change-password', [App\Http\Controllers\UserController::class, 'changePassword'])->name('change-pwd');
-    Route::patch('user/{user}', [App\Http\Controllers\UserController::class, 'updatePassword'])->name('update-password');
+    Route::get('/user/{user}/change-password', [UserController::class, 'changePassword'])->name('change-pwd');
+    Route::patch('user/{user}', [UserController::class, 'updatePassword'])->name('update-password');
+
+    Route::get('/send/email', [HomeController::class, 'mail']);
 });
 
 Route::get('/auth/redirect', function () {
