@@ -1,6 +1,6 @@
 ### Running this Laravel project on your local machine:
 
-> Before you begin, make sure you've [Laravel Framework](https://laravel.com/) installed on your local machine.
+> Before you begin, make sure you've [Laravel Framework](https://laravel.com/) installed on your local machine.\
 Package used: Laravel ui for authentication
 
 Use below steps to run this project locally: 
@@ -26,15 +26,16 @@ Create a database
 `> php artisan migrate`
 
 run
->$composer require laravel/ui
->php artisan ui vue --auth(vue for frontend template)
+`>$composer require laravel/ui`
+`>php artisan ui vue --auth(vue for frontend template)
 
 7. Use Artisan's `db` command to run seeders(optional)\
 `> php artisan db:seed`
 
 8. Use Artisan's `serve` command to run the app\
 `> php artisan serve`
-Now you are ready to use the app.
+
+Now you are ready to use the app.\
 
 For email notification testing, you can use any smtp of your like\
 mailtrap, gmail smtp, mailgun
