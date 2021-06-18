@@ -27,6 +27,7 @@ Create a database
 
 run
  >$composer require laravel/ui
+ 
  >php artisan ui vue --auth (vue for frontend template)
 
 7. Use Artisan's `db` command to run seeders(optional)\
