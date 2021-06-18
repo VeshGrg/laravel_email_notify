@@ -25,9 +25,9 @@ Create a database
 6. Use Artisan's `migrate` command to run all outstanding migrations\
 `> php artisan migrate`
 
-run
-`>$composer require laravel/ui`
-`>php artisan ui vue --auth(vue for frontend template)
+run\
+>$composer require laravel/ui
+>php artisan ui vue --auth (vue for frontend template)
 
 7. Use Artisan's `db` command to run seeders(optional)\
 `> php artisan db:seed`
@@ -35,7 +35,7 @@ run
 8. Use Artisan's `serve` command to run the app\
 `> php artisan serve`
 
-Now you are ready to use the app.\
+Now you are ready to use the app.
 
 For email notification testing, you can use any smtp of your like\
 mailtrap, gmail smtp, mailgun
