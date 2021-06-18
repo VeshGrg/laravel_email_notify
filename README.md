@@ -25,9 +25,9 @@ Create a database
 6. Use Artisan's `migrate` command to run all outstanding migrations\
 `> php artisan migrate`
 
-run\
->$composer require laravel/ui
->php artisan ui vue --auth (vue for frontend template)
+run
+ >$composer require laravel/ui
+ >php artisan ui vue --auth (vue for frontend template)
 
 7. Use Artisan's `db` command to run seeders(optional)\
 `> php artisan db:seed`
