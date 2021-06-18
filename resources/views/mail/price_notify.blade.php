@@ -8,8 +8,9 @@
     <title>Price notification</title>
 </head>
 <body>
-    <h2>Closing Price Notification. Date: {{ date('Y-m-d') }}</h2>,
-    <p>Closing price of {{ $dailytransaction->company }}  is Rs {{ $dailytransaction->cl_price }}.</p>
-    <h5>Thank You !!</h5> <span>Hamro Share Bazaar Team</span>
+    <h2>Closing Price Notification.</h2>
+    <h3>Date: {{ date('Y-m-d') }}</h3>
+    <p>Closing price of Company : <strong>{{ ucfirst($dailytransaction->company) }}</strong>  is Rs {{ $dailytransaction->cl_price }}.</p>
+    <h4>Thank You !!</h4> <span>Hamro Share Bazaar Team</span>
 </body>
 </html>

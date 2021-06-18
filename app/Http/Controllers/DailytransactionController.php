@@ -57,7 +57,7 @@ class DailytransactionController extends Controller
         $data['user_id'] = auth()->user()->id;
         $dailytransaction->fill($data);
         $dailytransaction->save();
-        
+
         $share = Share::all();
         foreach($share as $company){
             if($company->name_of_company == $dailytransaction->company){
