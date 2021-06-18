@@ -22,14 +22,6 @@ Route::get('/', function () {
    return view('welcome');
 });
 
-//Route::get('/', function () {
-//    $user = \App\Models\User::first();
-//    foreach($user->shares as $share){
-//        echo $share->name_of_company;
-//    };
-//    return view('mail.price_notify');
-//});
-
 Auth::routes();
 
 Route::group(['middleware'=> 'auth'], function(){
@@ -49,7 +41,6 @@ Route::group(['middleware'=> 'auth'], function(){
     Route::get('/user/{user}/change-password', [UserController::class, 'changePassword'])->name('change-pwd');
     Route::patch('user/{user}', [UserController::class, 'updatePassword'])->name('update-password');
 
-    Route::get('/send/email', [HomeController::class, 'mail']);
 });
 
 Route::get('/auth/redirect', function () {
@@ -58,7 +49,7 @@ Route::get('/auth/redirect', function () {
 
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('github')->user();
-    dd($user);
+    //dd($user);
     // $user->token
 });
 

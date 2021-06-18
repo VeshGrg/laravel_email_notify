@@ -36,20 +36,10 @@ class HomeController extends Controller
 
     public function edit()
     {
-        die('hi');
+        //die('hi');
         $user = User::find();
         return view(route('register'))
             ->with('user_data', $user);
     }
 
-    public function mail()
-    {
-        $transaction = Dailytransaction::all();
-        foreach ($transaction as $daily_detail) {
-//            if ($share->name_of_company == $daily_detail->company) {
-                Mail::to(auth()->user()->email)->send(new ShareClPriceNotification($daily_detail));
-//            }
-        }
-        return 'Email sent Successfully';
-    }
 }

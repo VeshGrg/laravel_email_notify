@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ShareClPriceNotification;
 use App\Models\Dailytransaction;
 use App\Models\Share;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -41,7 +42,7 @@ class DailytransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
+    public function store(Request $request, Dailytransaction $dailytransaction, Share $share, User $user)
     {
         $request->validate([
            'company' => 'required',
@@ -56,6 +57,13 @@ class DailytransactionController extends Controller
         $data['user_id'] = auth()->user()->id;
         $dailytransaction->fill($data);
         $dailytransaction->save();
+        
+        $share = Share::all();
+        foreach($share as $company){
+            if($company->name_of_company == $dailytransaction->company){
+                Mail::to($request->user()->email)->send(new ShareClPriceNotification($dailytransaction));
+            }
+        }
 
         return redirect()->route('dailytransactions.index')
             ->with('success', 'Daily transactions added successfully.');

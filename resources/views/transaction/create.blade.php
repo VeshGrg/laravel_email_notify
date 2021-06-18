@@ -13,17 +13,8 @@
                     <div class="col-9">
                         <select name="company" id="" class="form-control form-control-sm">
                             @foreach($share_data as $share)
-                            <option value="{{ $share }}">{{ $share }}</option>
+                                <option value="{{ $share }}">{{ $share }}</option>
                             @endforeach
-{{--                            <option value="">--Choose a Company--</option>--}}
-{{--                            <option value="nabil">Nabil Bank</option>--}}
-{{--                            <option value="himal">Himalayan Bank</option>--}}
-{{--                            <option value="sikles">Sikles Hydropower Ltd</option>--}}
-{{--                            <option value="chilime">Chilime Hydropower Ltd</option>--}}
-{{--                            <option value="soaltee">Soaltee Hotel</option>--}}
-{{--                            <option value="barahi">Hotel Barahi</option>--}}
-{{--                            <option value="cdec">CDEC Hydropower Investment Ltd</option>--}}
-{{--                            <option value="tourism">Tourism Investment Ltd</option>--}}
                         </select>
                         @error('company')
                         <span class="text-danger">{{ $message }}</span>
