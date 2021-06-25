@@ -50,9 +50,9 @@
                     <li>Daily Transaction
                         <ul>
                             <li><a href="{{ route('dailytransactions.index') }}">Show Transaction</a></li>
-                            @if(auth()->user()->role == 'admin')
+{{--                            @if(auth()->user()->role == 'admin')--}}
                                 <li><a href="{{ route('dailytransactions.create') }}">Add Transaction</a></li>
-                                @endif
+{{--                                @endif--}}
                         </ul>
                     </li>
                 </ul>
