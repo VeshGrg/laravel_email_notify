@@ -6,6 +6,9 @@ use App\Http\Controllers\DailytransactionController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Models\User;
+use App\Models\Dailytransaction;
+use App\Notifications\ShareClosingPrice;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +22,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-   return view('welcome');
+    $user = User::first();
+    $transaction = Dailytransaction::first();
+    $user->notify(new ShareClosingPrice($transaction));
+//   return view('welcome');
 });
 
 Auth::routes();
