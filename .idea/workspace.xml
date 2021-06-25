@@ -7,7 +7,7 @@
     <list default="true" id="4e7d9866-1736-484d-bb75-ac2deeb11b44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DailytransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DailytransactionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mail/price_notify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/price_notify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transaction/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +144,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../email_notify" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -234,7 +234,11 @@
       <workItem from="1623928590569" duration="50000" />
       <workItem from="1623929263774" duration="6892000" />
       <workItem from="1623936864991" duration="63000" />
-      <workItem from="1623983336526" duration="6934000" />
+      <workItem from="1623983336526" duration="6990000" />
+      <workItem from="1624005591002" duration="28000" />
+      <workItem from="1624157226892" duration="547000" />
+      <workItem from="1624158211027" duration="12000" />
+      <workItem from="1624193635213" duration="38000" />
     </task>
     <servers />
   </component>

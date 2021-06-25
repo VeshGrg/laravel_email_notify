@@ -31,7 +31,7 @@ class DailytransactionController extends Controller
      */
     public function create(Share $share)
     {
-        $share_detail = $share->orderBy('id', 'DESC')->pluck('name_of_company');
+        $share_detail = $share->orderBy('id', 'DESC')->pluck('name_of_company', 'id');
         return view('transaction.create')
             ->with('share_data', $share_detail);
     }

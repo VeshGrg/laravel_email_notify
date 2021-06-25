@@ -12,6 +12,7 @@
                     <label for="company" class="col-3">Choose a Company :</label>
                     <div class="col-9">
                         <select name="company" id="" class="form-control form-control-sm">
+                            <option value="">--Select Company Share--</option>
                             @foreach($share_data as $share)
                                 <option value="{{ $share }}">{{ $share }}</option>
                             @endforeach
