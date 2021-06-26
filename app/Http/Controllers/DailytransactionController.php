@@ -12,11 +12,18 @@ use Illuminate\Support\Facades\Mail;
 
 class DailytransactionController extends Controller
 {
+    public $user;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
+
     public function index()
     {
         $transaction = Dailytransaction::latest()->paginate(8);
@@ -42,8 +49,9 @@ class DailytransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Dailytransaction $dailytransaction, Share $share, User $user)
+    public function store(Request $request, Dailytransaction $dailytransaction, Share $share)
     {
+        dd($dailytransaction->shares->id);
         $request->validate([
            'company' => 'required',
            'type' => 'required|in:hydropower,bfi,investment,hotel',

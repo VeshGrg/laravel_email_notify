@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Models\User;
 use App\Models\Dailytransaction;
 use App\Notifications\ShareClosingPrice;
+use Illuminate\Support\Facades\Notification;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,10 @@ use App\Notifications\ShareClosingPrice;
 */
 
 Route::get('/', function () {
-    $user = User::first();
-    $transaction = Dailytransaction::first();
-    $user->notify(new ShareClosingPrice($transaction));
-//   return view('welcome');
+//    $user = User::first();
+//    $transaction = Dailytransaction::first();
+//    $user->notify(new ShareClosingPrice($transaction));
+  return view('welcome');
 });
 
 Auth::routes();

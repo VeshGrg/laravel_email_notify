@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\Dailytransaction;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -42,9 +43,10 @@ class ShareClosingPrice extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('http://laravel.com'))
-                    ->line('Thank you for using our application!');
+            ->line('The Closing  Price of '.$this->transaction->company.' is '.$this->transaction->cl_price)
+            ->action('Notification Action', url('http://laravel.com'))
+            ->line('Thank you for using our application!');
+
     }
 
     /**
